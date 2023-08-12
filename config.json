@@ -1,0 +1,15 @@
+{
+    "filename": "config.json",
+    "port": 3000,
+    "host": "127.0.0.1",
+    "user": "root",
+    "password": "",
+    "database": "node",
+    "table": "cadastros",
+    "extended": true,
+    "publicPath": "public",
+    "protocol": "http://",
+    "origin": "localhost",
+    "method": "GET, POST",
+    "content": "Content-Type"
+}
