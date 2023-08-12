@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJs Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <form method="post" id="formulario">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="input-nome" name="nome" placeholder="Nome">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="input-sobrenome" name="sobrenome" placeholder="Sobrenome">
+            </div>
+            <div class="mb-3">
+                <input type="date" class="form-control" id="input-nascimento" name="nascimento" placeholder="Nascimento (dd-mm-YYYY)">
+            </div>
+            <div class="mb-3">
+                <label for="input-homem" class="form-label">Gênero</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="input-homem" name="genero" value="Homem">
+                    <label class="form-check-label" for="input-homem">Homem</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="input-mulher" name="genero" value="Mulher">
+                    <label class="form-check-label" for="input-mulher">Mulher</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" id="descricao" name="descricao" placeholder="Conte-nos sobre você"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="input-linguagem" class="form-label">Linguagem de Programação Favorita</label>
+                <select class="form-select" id="input-linguagem" name="linguagem">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                </select>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <button type="submit" class="btn btn-primary p-2">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <div class="d-flex justify-content-center align-items-center mb-3 fixed-bottom">
+        <footer>
+            <img src="img/node-logo.png" width="200">
+        </footer>
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="successModalLabel">Sucesso!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              O cadastro foi realizado com sucesso.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="errorModalLabel">Erro!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Ocorreu um erro ao realizar o cadastro.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
